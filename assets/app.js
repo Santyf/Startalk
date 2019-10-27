@@ -1,7 +1,4 @@
 $(document).on("click", ".gif-btn", displayInfo);
-$(document).on("click", ".gifs", changeState);
-
-
 
 var topics = ["Sports", "Dogs", "Gaming", "Music"];
 
@@ -24,10 +21,7 @@ function displayInfo() {
         for (var i = 0; i < response.data.length; i++) {
 
             var inputDiv = $("<div>")
-            // inputDiv.attr("src", response[i].images.original_still.url);
-            // inputDiv.attr("data-still", response[i].images.original_still.url);
-            // inputDiv.attr("data-animate", response[i].images.original.url);
-            // inputDiv.attr("data-state", "still");
+       
             inputDiv.addClass("gifs");
 
             var rating = response.data[i].rating;
@@ -38,6 +32,11 @@ function displayInfo() {
             var imgURL = response.data[i].images['480w_still'].url;
 
             var image = $("<img>").attr("src", imgURL);
+            image.addClass("img");
+            //  image.attr("src", response[i].images.original_still.url);
+            // image.attr("data-still", response[i].images.original_still.url);
+            // image.attr("data-animate", response[i].images.original.url);
+            // image.attr("data-state", "still");
 
            
            
@@ -92,21 +91,18 @@ $("#add-gif").on("click", function (event) {
     renderButtons();
 });
 
-function changeState() {
+$(".img").on("click", function() {
+    
     var state = $(this).attr("data-state");
-    var animateImage = $(this).attr("data-animate");
-    var stillImage = $(this).attr("data-still");
-
-    if (state == "still") {
-        $(this).attr("src", animateImage);
-        $(this).attr("data-state", "animate");
+ 
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
     }
-
-    else if (state == "animate") {
-        $(this).attr("src", stillImage);
-        $(this).attr("data-state", "still");
-    }
-}
+  });
 
 
 
