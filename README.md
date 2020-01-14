@@ -1,3 +1,4 @@
+![giftastic screenshot](https://user-images.githubusercontent.com/53352836/72309056-d0197d80-364b-11ea-9030-3d31feb114ca.PNG)
 
 
 # GifTastic
