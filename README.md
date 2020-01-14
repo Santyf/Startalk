@@ -1,3 +1,26 @@
-# Startalk
-Api homework
-Checkout the website https://santyf.github.io/Startalk/
+
+
+# GifTastic
+
+Using the GIPHY API to search of all kinds of GIF.
+
+
+## Technologies
+
+* HTML
+* CSS
+* JavaScript
+* jQuery
+
+## Instructions
+
+You will be begin with a set of random GIFs buttons. Once you click on the button it will display 10 different GIFs images.
+
+Make sure you click on the GIF image to play and click to pause as well.
+
+You also have the option to search of any type of GIF.
+
+You can get creative as much as you want.
+
+## Checkout the website 
+https://santyf.github.io/Startalk/
